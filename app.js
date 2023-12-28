@@ -1,0 +1,23 @@
+const express = require('express') 
+const app = express(); 
+const bcrypt = require('bcryptjs')
+const bodyParser=require('body-parser')
+const colors = require('colors')
+const dotenv = require('dotenv')
+const {body, validationResult} = require('express-validator')
+const jwt = require('jsonwebtoken')
+const mongoose = require('mongoose')
+
+dotenv.config();
+mongoose.connect(process.env.DBUri);
+const PORT = process.env.PORT;
+app.use(express.json());
+app.use(bodyParser.json()); 
+
+app.get('/',(req,res)=>{
+   res.send("Hello World");
+})
+
+app.listen(PORT,()=>{
+  console.log(`server running on http://localhost:${PORT}`.rainbow.bold); 
+});
