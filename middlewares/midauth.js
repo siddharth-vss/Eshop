@@ -5,6 +5,10 @@ let log = [
     body('email', 'Enter a valid email').isEmail(),
     body('password', 'Password must be atleast 8 characters').isLength({ min: 8 }),
 ];
+let log2 = [
+    body('mobile', 'Mobile number must be atleast 10 characters').isLength({ min: 10 }),
+    body('password', 'Password must be atleast 8 characters').isLength({ min: 8 }),
+];
 
 let reg = [
     body('name', 'Enter a valid name').isLength({ min: 10 }),
@@ -14,4 +18,4 @@ let reg = [
 ];
 
 
-module.exports = { reg, log };
+module.exports = { reg, log , log2 };

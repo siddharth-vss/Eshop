@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { login ,register,states,update  } = require('../controllers/auth')
-const { log,reg } = require('../middlewares/midauth')
+const { log,log2,reg } = require('../middlewares/midauth')
 
 
 router.route('/').post(reg,register);
-router.route('/').get(log,login);
+router.route('/login').post(log2 || log,login);
 
 
 module.exports = router;
