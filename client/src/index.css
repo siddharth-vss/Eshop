@@ -1,3 +1,18 @@
 :root{
-  
+    --background-color1: #525CEB;
+    --background-color2: #B6BBC4;
+    --background-color3: #3772FF;
+    --background-color5: #E9F1F7;
+    --background-color4: #6622CC;
+    --componet1:#6622CC;
+    --componet2:#5eb1bf;
+    --componet3:#DC0073;
+    --componet4:#89043D;
+    --componet5:#B2ABF2;
+    --componet6:#3772FF;
+    --main:#f7f7f7
+}
+
+body{
+    background-color: var(--background-color3); 
 }
