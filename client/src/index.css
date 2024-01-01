@@ -10,9 +10,16 @@
     --componet4:#89043D;
     --componet5:#B2ABF2;
     --componet6:#3772FF;
-    --main:#f7f7f7
+    --main:#f7f7f7;
+    --grediant1:#00CBFE;
+    --grediant2:#0171C7;
+    --bg:linear-gradient(10deg,var(--grediant2),var(--grediant1));
+
+
 }
 
 body{
-    background-color: var(--background-color3); 
+    background:var(--bg); 
+    /* background:var(--bg);  */
+    height: 99vh;
 }
