@@ -10,7 +10,7 @@ const Uesr = mongoose.Schema({
     email: String,
     password: String,
     mobile:Number,
-    isAdmin:{default:false,type : Boolean},
+    isAdmin: Boolean,
     pic:String,
 },{timestamps: true });
 
