@@ -23,3 +23,32 @@ body{
     /* background:var(--bg);  */
     height: 99vh;
 }
+
+ 
+
+   .open {
+    width: 15vw;
+    height:100vh;
+   }
+   .close {
+     width: 5vw;
+     height:100vh;
+   }
+
+   .imgon{
+    filter: grayscale(0);
+   }
+   .imgof{
+    filter: grayscale(1);
+   }
+
+   .bodyin{
+    width: 95vw;
+    margin-left:-10vw;
+    height:100vh;
+    transition: 1s;
+   }
+   .bodyout{
+    width: 95vw;
+    height:100vh;
+   }
