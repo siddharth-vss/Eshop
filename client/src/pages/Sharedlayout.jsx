@@ -22,7 +22,7 @@ const Sharedlayout = () => {
        <Pannel glass={glass} />
        <Sidebar glass={glass}/>
      </div>
-     <div style={{height:"99.5vh",width:"85vw",marginLeft:"4px",marginTop:"-8px" , backgroundColor: "red"}} >
+     <div style={{height:"99.5vh",width:"85vw",marginLeft:"4px",marginTop:"-8px"}} >
       <Outlet glass={glass} />
      </div>
    </Box>
