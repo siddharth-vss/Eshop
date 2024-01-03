@@ -8,6 +8,7 @@ import { MdSell } from "react-icons/md";
 import { RiBillFill } from "react-icons/ri";
 import { FaNoteSticky , FaDatabase ,FaFileInvoiceDollar ,FaPeopleGroup } from "react-icons/fa6";
 import { FaTruck ,FaHandshake } from "react-icons/fa";
+import { useState } from "react";
 
 
 const Box = styled.div`
@@ -15,7 +16,7 @@ const Box = styled.div`
    z-index: 10;
    position: absolute;
    background-color:#636363a1;
-   height:100vh;
+   height:99.5vh;
    width: 15vw;
    transition: 1s ;
    
@@ -55,6 +56,13 @@ const Box = styled.div`
    }
 `
 const Pannel = () => {
+
+ const [isAdmin,setSAdmin] = useState(true);
+ const free = false ;  
+ 
+ if(free){
+     setSAdmin(!isAdmin);
+   }
   return (
     <Box >
 
@@ -71,51 +79,66 @@ const Pannel = () => {
           </Link>
         </li>
         <li>
-          <Link to="/orders" >
+          <Link to="/dashboard/orders" >
           <BsFillInboxesFill /><h2>Orders</h2>
           </Link>
         </li>
         <li>
-          <Link to="/notes" >
+          <Link to="/dashboard/notes" >
           <FaNoteSticky /><h2>Notes</h2>
           </Link>
         </li>
+      { isAdmin === false &&
+          <li>
+            <Link to="/dashboard/tracking" >
+            <FaTruck /><h2>Tracking product</h2>
+            </Link>
+          </li>
+        }
+        {isAdmin &&
         <li>
-          <Link to="/tracking" >
-          <FaTruck /><h2>Tracking product</h2>
-          </Link>
-        </li>
-        <li>
-          <Link to="/customers" >
+          <Link to="/dashboard/customers" >
           <FaPeopleGroup /><h2>Top Customers</h2>
           </Link>
         </li>
+        }
+
+        {isAdmin &&
         <li>
-          <Link to="/deals" >
+          <Link to="/dashboard/deals" >
           <FaHandshake /><h2>Top Deals</h2>
           </Link>
         </li>
+        }
+       
+       {isAdmin === false &&
         <li>
-          <Link to="/sells" >
+          <Link to="/dashboard/sells" >
           <MdSell /> <h2>Sells</h2>
           </Link>
         </li>
+       }
+       {isAdmin &&
         <li>
-          <Link to="/bill" >
+          <Link to="/dashboard/bill" >
           <RiBillFill /><h2>Billing</h2>
           </Link>
         </li>
+}
+{isAdmin &&
         <li>
-          <Link to="/invoice" >
+          <Link to="/dashboard/invoice" >
           <FaFileInvoiceDollar /><h2>Invoice</h2>
           </Link>
         </li>
+}
+{isAdmin &&
         <li>
-          <Link to="/data" >
+          <Link to="/dashboard/data" >
           <FaDatabase /><h2>DATA</h2>
           </Link>
         </li>
-
+}
 
       </ul>
 

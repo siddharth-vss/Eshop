@@ -8,7 +8,7 @@ const Box = styled.div`
    
    
    img{
-     height:100vh;
+     height:99.5vh;
      width:15vw;
      transition: 1s ;
    }

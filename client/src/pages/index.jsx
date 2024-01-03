@@ -1,5 +1,5 @@
 import Login  from "./login";
 import Register  from "./register";
-import Dashboard  from "./dashboard";
+import Sharedlayout  from "./Sharedlayout";
 
-export {Dashboard,Login,Register} ;
+export {Sharedlayout,Login,Register} ;

@@ -9,7 +9,7 @@ display:flex;
 `
 
 
-const Dashboard = () => {
+const Sharedlayout = () => {
    
   const [glass , setGlass] = useState(true);
   document.body.style.background = "#B2ABF2";
@@ -18,14 +18,16 @@ const Dashboard = () => {
   return (
     <>
    <Box>
-     <div style={{height:"100vh",width:"15vw",marginLeft:"-8px",marginTop:"-8px"}} onPointerEnter={()=>{setGlass(false)}} onPointerLeave={()=>{setGlass(true)}} >
+     <div style={{height:"99.5vh",width:"15vw",marginLeft:"-8px",marginTop:"-8px"}} onPointerEnter={()=>{setGlass(false)}} onPointerLeave={()=>{setGlass(true)}} >
        <Pannel glass={glass} />
        <Sidebar glass={glass}/>
      </div>
-     <Outlet glass={glass} />
+     <div style={{height:"99.5vh",width:"85vw",marginLeft:"4px",marginTop:"-8px" , backgroundColor: "red"}} >
+      <Outlet glass={glass} />
+     </div>
    </Box>
     </>
   )
 }
 
-export default Dashboard
+export default Sharedlayout
